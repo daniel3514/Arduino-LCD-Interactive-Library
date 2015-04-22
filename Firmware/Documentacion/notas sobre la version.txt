@@ -1,0 +1,51 @@
+Firmware
+Notas sobre la version
+Compilado en Arduino IDE v1.0.6
+
+v0.3 - Hardware v0.0 - Stable
+- se agrega void Back_Light_En() para encender o apagar el back light desde el teclado numerico
+- se agrega el void Back_Light_Init() para encender o apagar el back light desde la ultima configuracion
+- se agrega a Control Options el menu Config
+- se agrega void GUI_Config() con las opciones de la configuracion y el LCD y la salida al pwm
+- agregado el control del back light a gui_navegar, siempre esta activo
+
+v0.2 - Hardware v0.0 - Stable
+- CORREGIDO - retirar de setup las variables de la vercion y pasarlas directamente a su void
+	    - no hay razon para que sean globales
+- CORREGIDO - en gui about retirar el delay en el efecto binario
+- CORREGIDO - eeprom save, load empty y clear retirar delay de efecto
+	    - se retiro en todos los casos
+- CORREGIDO - agregar al inicio del programa .ino un about
+- en control chaser se quito el espacio entre delay el numero y x10=mS, parece que fuera una opcion
+
+v0.1 - Hardware v0.0 - Stable
+- CORREGIR - retirar de setup las variables de la vercion y pasarlas directamente a su void
+- CORREGIR - en gui about retirar el delay en el efecto binario
+- CORREGIR - eeprom save, load empty y clear retirar delay de efecto
+- CORREGIR - agregar al inicio del programa un about
+- CORREGIR - checar el tema de el puerto de data flux, no se asigna
+- actualizacion del texto about
+- actualizacion del texto memory initial
+- se agrego al GUI memory "empty" para borrar la ram
+- se cambio gui_init por gui_about
+- se agrego a about al inicio el efecto del binario corriendo
+- se cambia en unitary control, matrix por control y aunta a gui control options
+- se cambia en matrix control, ubi por con y aunta a gui control options
+- se agrega a control options about
+- se agrega a control opyions Chaser
+- se agrega a control options multiply
+- agregado el control multiply
+- se quita la opcion about es muy repetitiva
+
+v0.0 - Hardware v0.0 - Stable
+- CORREGIDO - cambiar en gui unit a "Unitary"
+- CORREGIDO - cambiar en GUI multi a "Matrix"
+- CORREGIDO - hacer los barridos de la memoria mas rapidos, se agrega efecto de carga y no baja la velocidad
+- CORREGIDO - agregar al menu memory "cancel"
+- se agrega 100ms mas a la lectura de los cursores
+- CORREGIDO - cuando se escribe un numero en la matriz o en unit mayor o menor al limite la variable funciona pero el visual no
+- en multi no hay vispa de posicion
+- se agrega lineas bajas cuando se esta escribiendo un numero, se quitaron los ceros
+- se implementa para el caso de los valores A para 255 y B para 000
+- se implementa para los valores la tecla C para ubicar la lampara, parpadea y deja de hacerlo al volverla a precionar
+- se implementa en la matriz el valor C que indica el canal donde esta posicionado el cursor
